@@ -1,0 +1,55 @@
+1. Clase RedNacional
+Representa la red nacional de estaciones de servicio.
+-Atributos:
+Lista de estaciones de servicio (instancias de la clase EstacionDeServicio).
+Precios de los combustibles según región (Norte, Centro, Sur).
+-Métodos:
+Agregar/eliminar estaciones.
+Calcular monto total de ventas por categoría a nivel nacional.
+Fijar los precios del combustible para toda la red.
+Detectar fugas de combustible en las estaciones.
+
+2. Clase EstacionDeServicio
+Representa una estación de servicio.
+-Atributos:
+Nombre, código identificador, gerente, región, ubicación (GPS).
+Tanque de combustible (instancia de TanqueCombustible).
+Lista de surtidores (instancias de Surtidor).
+Estado (si está activa o inactiva).
+-Métodos:
+Agregar/eliminar surtidores.
+Activar/desactivar surtidores.
+Reportar ventas por categoría.
+Asignar capacidades de tanques (de 100 a 200 litros por categoría).
+Consultar el histórico de ventas de la estación.
+Simular una venta.
+
+3. Clase TanqueCombustible
+Representa el tanque central de almacenamiento de combustible.
+-Atributos:
+Capacidad y cantidad disponible para cada categoría de combustible (Regular, Premium, EcoExtra).
+-Métodos:
+Actualizar la cantidad disponible cuando se realiza una venta.
+Verificar si hay suficiente combustible para una venta.
+
+4. Clase Surtidor
+Representa un surtidor dentro de una estación.
+-Atributos:
+Código identificador, modelo, estado (activo o inactivo).
+Histórico de transacciones (fecha, hora, cantidad de litros, categoría, método de pago, etc.).
+-Métodos:
+Registrar una venta.
+Consultar histórico de transacciones.
+Simular la venta de combustible.
+
+5. Clase Transaccion
+Representa una venta de combustible.
+-Atributos:
+Fecha, hora, cantidad de litros vendidos, categoría de combustible, método de pago, número de documento del cliente, monto total.
+
+6. Clase FugaCombustible
+Representa el sistema de verificación de fugas.
+-Atributos:
+Estación a verificar, categoría de combustible.
+-Métodos:
+Verificar si lo vendido más lo almacenado es mayor al 95% de la capacidad original.
